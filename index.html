@@ -6,15 +6,44 @@
   <title>Liderança Corporativa — Silvanio Gois</title>
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f4f4; }
-    header { background-color: #27628d; color: #fff; padding: 10px 20px; text-align: center; }
-    header h1 { font-size: 22px; margin: 4px 0; }
-    header h2 { font-size: 14px; margin: 2px 0; }
+
+    /* CABEÇALHO COM FOTO */
+    header {
+      background-color: #27628d;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-text {
+      flex: 1 1 300px;
+      text-align: left;
+    }
+
+    .header-text h1 { font-size: 22px; margin: 4px 0; }
+    .header-text h2 { font-size: 14px; margin: 2px 0; }
+
+    .header-img {
+      flex: 0 0 120px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .header-img img {
+      max-width: 120px;
+      height: auto;
+      border-radius: 8px;
+    }
+
     .section { padding: 20px; max-width: 900px; margin: auto; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 20px; opacity: 0; transform: translateY(20px); animation: fadeIn 1s forwards; }
 
     @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-    h2.section-title { border-bottom:2px solid #27628d; padding-bottom:4px; margin-top:20px; color:#27628d; transition: color 0.3s, transform 0.2s; }
-    h2.section-title:hover { color: #1b4563; cursor: pointer; transform: scale(1.03); }
+    h2.section-title { border-bottom:2px solid #27628d; padding-bottom:4px; margin-top:20px; color:#1c3d5a; transition: color 0.3s, transform 0.2s; }
+    h2.section-title:hover { color: #16374d; cursor: pointer; transform: scale(1.03); }
 
     table { width: 100%; border-collapse: collapse; margin-top: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; transition: background-color 0.3s, transform 0.2s; }
@@ -40,7 +69,12 @@
     h3 { text-align: center; color: #27628d; margin-top: 20px; transition: color 0.3s, transform 0.2s; }
     h3:hover { color: #1b4563; cursor: pointer; transform: scale(1.03); }
 
+    /* RESPONSIVIDADE */
     @media screen and (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      .header-text { text-align: center; }
+      .header-img { justify-content: center; margin-top: 10px; }
+      .header-img img { max-width: 100px; }
       header h1 { font-size: 18px; }
       header h2 { font-size: 12px; }
       table, th, td { font-size: 12px; }
@@ -51,8 +85,13 @@
 <body>
 
 <header>
-  <h1>Silvanio Gois — Técnico em Administração e Edificações</h1>
-  <h2>Graduando em Processos Gerenciais | sg@silvaniogois.com.br | www.silvaniogois.com.br</h2>
+  <div class="header-text">
+    <h1>Silvanio Gois — Técnico em Administração e Edificações</h1>
+    <h2>Graduando em Processos Gerenciais | sg@silvaniogois.com.br | www.silvaniogois.com.br</h2>
+  </div>
+  <div class="header-img">
+    <img src="SG Executivo.png" alt="Foto de Silvanio Gois">
+  </div>
 </header>
 
 <div class="section">
